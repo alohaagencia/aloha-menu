@@ -1,0 +1,21 @@
+{
+  "name": "aloha-menu",
+  "authors": [
+    "uselessdev <wallacebatistaoliveira@gmail.com>"
+  ],
+  "description": "An toggle menu with Polymer",
+  "main": "aloha-menu.html",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^1.7.0"
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#3d566e">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+
+  <title>Aloha Menu</title>
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700">
+
+  <script src="../bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+  <link rel="import" href="aloha-menu.html">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    button { padding: 5px; }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      
+      align-items: center;      
+      justify-content: center;
+      flex-flow: column nowrap;
+
+      background-color: #f9f9f9;
+    }
+      h1 { font: 3rem/1 'Roboto', Arial; }
+      small { font: 1.2rem/1.2 'Roboto', Arial; }
+  </style>
+</head>
+<body>
+
+  <aloha-menu>
+    <menu-link href="#home">Home</menu-link>
+    <menu-link href="#usage">Usage</menu-link>
+    <menu-link href="#download">Download</menu-link>
+  </aloha-menu>
+
+  <section class="container" id="home">
+    <h1>aloha-menu</h1>
+    <small>Polymer Component</small>
+  </section>
+
+  <section class="container" id="usage">
+    <h1>Usage</h1>
+    <small>wip</small>
+  </section>
+
+  <section class="container" id="download">
+    <h1>Download</h1>
+    <small>git submodule add git@github.com:alohaagencia/aloha-menu.git</small>
+  </section>
+
+</body>
+</html>
