@@ -8,7 +8,6 @@
   "main": "aloha-menu.html",
   "license": "MIT",
   "homepage": "https://github.com/alohaagencia/aloha-menu",
-  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
