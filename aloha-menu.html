@@ -1,4 +1,4 @@
-<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="bower_components/polymer/polymer.html">
 
 <!-- Menu Items -->
 <dom-module id="menu-link">
@@ -8,19 +8,33 @@
         padding: 15px;
         display: block;
         border-bottom: 1px solid rgba(255,255,255,.1);
-
-        color: #f9f9f9;
-        text-decoration: none;
-        font: 1.4rem/1.5 'Ubuntu', Arial;
-      }
-
-      .menu-item:hover {
-        background-color: #222;
         transition: all .2s;
       }
-    </style>
+        .menu-item a {
+          color: #f9f9f9;
+          text-decoration: none;
+          font: 1.4rem/1.5 'Ubuntu', Arial;
+          transition: all .2s;
+        }
 
-    <a class="menu-item" href="{{href}}" target="{{target}}">{{text}}</a>
+        .menu-item:hover { background-color: #222; }
+
+      @media screen and (min-width: 1024px) {
+        .menu-item {
+          display: inline-block;
+          vertical-align: middle;
+        }
+          .menu-item a { color: #333; }
+
+          .menu-item:hover { background-color: transparent; }
+          .menu-item:hover a { color: #000; }
+      }
+    </style>
+    
+    <li class="menu-item">
+      <a href="{{href}}" target="{{target}}">{{text}}</a>
+      <content></content>
+    </li>
   </template>
 
   <script>
@@ -88,9 +102,13 @@
         .hamburger-bar::after { top: 9px; }
         .hamburger-bar::before { top: -9px; }
 
-        #hamburger.menu-is-visible {
+        .hamburger.menu-is-visible {
           transform: translateX(-250px);
         }
+
+      @media screen and (min-width: 1024px) {
+        .hamburger { display: none; }
+      }
 
       .menu {
         top: 0;
@@ -102,20 +120,33 @@
         display: block;
         max-width: 250px;
 
+        list-style: none;
+
         background-color: #333;
         transition: all .2s;
         transform: translateX(250px)
       }
         .menu.is-visible { transform: translateX(0); }
+
+      @media screen and (min-width: 1024px) {
+        .menu {
+          position: static;
+          width: auto;
+          height: auto;
+          display: initial;
+
+          background-color: transparent;
+        }
+      }
     </style>
 
     <button id="hamburger" class="hamburger" aria-label="Toggle navigation" aria-hidden="true">
       <span class="hamburger-bar"></span>
     </button>
     
-    <div class="menu">
+    <ul class="menu">
       <content></content>
-    </div><!-- /.menu -->
+    </ul><!-- /.menu -->
   </template>
 
   <script>
