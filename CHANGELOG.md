@@ -8,7 +8,7 @@
 - Submenu items
 - Hide button on large screen
 
-## [0.1.0] - YYYY-MM-DD
+## [0.1.0] - 2016-11-17
 
 ### Added
 
