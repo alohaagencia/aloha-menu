@@ -1,19 +1,18 @@
 {
   "name": "aloha-menu",
+  "version": "0.1.0",
   "authors": [
     "uselessdev <wallacebatistaoliveira@gmail.com>"
   ],
   "description": "An toggle menu with Polymer",
   "main": "aloha-menu.html",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/alohaagencia/aloha-menu",
   "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "bower_components"
   ],
   "dependencies": {
     "polymer": "^1.7.0"
